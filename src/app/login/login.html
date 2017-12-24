@@ -1,0 +1,22 @@
+<p-growl [(value)]="msgs"></p-growl>
+
+<form [formGroup]="myForm">
+    <div class="ui-g">
+        <div class="ui-g-12 setBgImg">
+            <div class="cardCnter">
+                <div class="ui-g" style="padding-left: 12%;">
+                    <div class="ui-g-12">
+                        <input type="text" formControlName="username" (keyup.enter)="login()" class="inputTxt" placeholder="username" pInputText />
+                    </div>
+                    <div class="ui-g-12">
+                        <input type="password" (keyup.enter)="login()" formControlName="password" class="inputTxt" placeholder="password" pInputText />
+                    </div>
+                    <div class="ui-g-12">
+                        <button class="btn"  [disabled]="!myForm.valid" type="button" (click)="login()" label="Login" pButton></button>
+                    </div>
+                    <p (click)="signupPage()" class="createAnew">Create a new </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

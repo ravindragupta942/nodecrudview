@@ -1,0 +1,30 @@
+<p-growl [(value)]="msgs"></p-growl>
+<form [formGroup]="myFormSignup">
+    <div class="ui-g">
+        <div class="ui-g-12 setBgImg">
+            <div class="cardCnter">
+                <div class="ui-g" style="padding-left: 12%;">
+                    <div class="ui-g-12 headerText">
+                        Create a new account
+                    </div>
+                    <div class="ui-g-12">
+                        <input type="text" formControlName="username" class="inputTxt" placeholder="username" pInputText />
+                    </div>
+                    <div class="ui-g-12">
+                        <input type="password" formControlName="password" class="inputTxt" placeholder="password" pInputText />
+                    </div>
+                    <div class="ui-g-12">
+                        <input type="text" formControlName="email" class="inputTxt" placeholder="email" pInputText />
+                    </div>
+                    <div class="ui-g-12">
+                        <input type="mobile" minlength="10" maxlength="10" formControlName="mobile" class="inputTxt" placeholder="mobile" pInputText />
+                    </div>
+                    <div class="ui-g-12">
+                        <button class="btn" type="button" [disabled]="!myFormSignup.valid" (click)="postData()" label="Create" pButton></button>
+                    </div>
+                    <p (click)="loginPage()" class="createAnew">Back</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
